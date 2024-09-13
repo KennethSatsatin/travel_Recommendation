@@ -3,22 +3,22 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 nav {
-    background: linear-gradient(to right, #010E09, gray);
+    background: linear-gradient(to right, rgba(22, 66, 60, 0.5), rgba(106, 156, 137, 0.5));
     display: flex;
     align-items: center;
-    justify-content: space-between;   
+    justify-content: space-between;
+    padding: 5px 5px;   
   }
   
   nav ul {
     list-style-type: none;
-    /* padding: 0; */
   }
   
   nav ul li {
     display: inline;
+    padding: 10px;
   }
   
   nav a {
@@ -28,56 +28,90 @@ nav {
   }
   nav h1 {
     color: white;
-  }
-  
-  /* Basic CSS for the form elements */
-  body {
-    font-family: Arial, sans-serif;
-    /* margin: 20px; */
-  }
-  
-  h1 {
-    margin: 5px 0px 5px 5px;
-  }
-  
-  div {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: inline-block;
-    width: 100px;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  select {
-    width: 200px;
     padding: 5px;
   }
   
-  button {
-    padding: 7px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgba(22, 66, 60, 0.5), rgba(106, 156, 137, 0.5)), url('Travel.jpg');
+    background-size: cover, cover;;
+    height: 100vh;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.search-bar {
+    padding: 5px;
+    position: relative;
+    width: auto;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+
+.input-wrapper input[type="text"], input[type="number"] {
+  padding: 10px 40px 10px 10px;
+  border: none;
+  border-radius: 20px;
+  width: 350px;
+}
+
+.input-wrapper i {
+  position: absolute;
+  top: 50%;
+  left: 250px;
+  transform: translateY(-50%);
+  color: #16423C;
+}
+
+.input-wrapper button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#btnSearch {
+    right: 65px;
+    background-color: #16423C;
+    color: #fff;
+}
+
+#btnClear {
+    right: 10px;
+    background-color: #16423C;
+    color: #fff;
+}
+
   
-  button:hover {
-    background-color: #45a049;
+#btnSearch:hover{
+    background-color: #010E09;
   }
+
+#btnClear:hover {
+    background-color: #010E09;
+}
   
-  /* Basic CSS for the report section */
-  h2 {
+ /* Basic CSS for the report section */
+h2 {
     margin-top: 30px;
-  }
+}
   
-  #report,#result {
+#report,#result {
     padding: 10px;
     max-width: 400px;
     word-wrap: break-word;
-  }
+}
+
 #result{
   height: 400px;
   width: 500px;
@@ -86,8 +120,88 @@ nav {
   justify-content: space-around;
   flex-direction: column;
 }
-  #result img{
+
+#result img{
     width: 200px;
     height: 100px;
-  }
+}
+
+.left-side {
+    float: left;
+    width: 200px; 
+    padding: 20px;
+}
+
+.left-side ul {
+    list-style-type: none;
+}
+
+.left-side ul li {
+    margin-bottom: 10px; 
+}
+
+.left-side img {
+    width: 50px; 
+    height: 50px; 
+}
+
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 150px 1000px; /* Adjust the ratio of the columns */
+    gap: 10px; /* Space between columns */
+    height: 600px;
+}
+
+.grid-item.logo {
+    grid-column: 1; 
+    justify-self: start; 
+    align-self: end; 
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px;
+    gap: 20px;
+}
+
+.logo img {
+    width: 30px; 
+    height: 30px; 
+}
+
+.content {
+    justify-self: start; 
+    align-self: center; 
+    padding: 10px;
+}
+
+.content h1 {
+    font-size: 50px; 
+    text-align: left; 
+    font-family: sans-serif;
+    font-weight: 1000;
+    color: white;
+}
+
+.content p {
+    margin: 25px 700px 25px 0px;
+    color: white;
+}
+
+.content button {
+    padding: 10px 30px;
+    background-color: #16423C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content button:hover {
+    background-color: #010E09;
+}
+
   

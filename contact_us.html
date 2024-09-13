@@ -17,27 +17,47 @@
                 <li><button id='btnClear'>Clear</button></li>
             </ul>
         </nav>
-    <h1>Contact Us</h1>
-    <p>Feel free to contact us to know more about your conditions and for treatment methods.</p>
-    <form id="contactForm">
-        <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+    <main class="grid-container">
+        <div class="grid-item logo">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="facebook.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="twitter.png" alt="Twitter Logo">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="instagram.png" alt="Instagram Logo">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="youtube.png" alt="YouTube Logo">
+            </a>  
         </div>
         <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+            <h1>Contact Us</h1>
+            <p>Feel free to contact us to know more about your conditions and for treatment methods.</p>
         </div>
         <div>
-        <label for="condition">Condition</label>
-        <input type="text" id="condition" name="condition" required>
+            <form id="contactForm">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="condition">Condition</label>
+                    <input type="text" id="condition" name="condition" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                    <button type="submit" onclick="thankyou()">Submit</button>
+            </form>
         </div>
-        <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" onclick="thankyou()">Submit</button>
-    </form>
+        </main>
     <script>
         function thankyou(){
             alert('Thank you for contacting us!')
