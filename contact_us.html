@@ -3,56 +3,53 @@
     <head>
     <meta charset="UTF-8">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="./travel_recommendation.css">
     <link rel="stylesheet" href="./contact_us.css">
     </head>
     <body>
-        <nav><h1>Travely</h1>
-            <ul>
-                <li><a href="./travel_recommendation.html" id="home">Home </a></li>
-                <li><a href="./about_us.html" id="about_us">About Us </a></li>
-                <li><a href="./contact_us.html" id="contact_us">Contact Us </a></li>
-                <li><input type="text" id="conditionInput" placeholder="Enter a destination or keyword">  </li>
-                <li><button id='btnSearch'>Search</button></li>
-                <li><button id='btnClear'>Clear</button></li>
-            </ul>
+        <nav>
+            <div class="nav-left">
+                <h1>Travely</h1>
+            </div>
+            <div class="nav-center"> 
+                <ul>
+                    <li><a href="./travel_recommendation.html" id="home">Home </a></li>
+                    <li><a href="./about_us.html" id="about_us">About Us </a></li>
+                    <li><a href="./contact_us.html" id="contact_us">Contact Us </a></li>
+                </ul>
+            </div>
         </nav>
     <main class="grid-container">
         <div class="grid-item logo">
             <a href="https://www.facebook.com" target="_blank">
-                <img src="facebook.png" alt="Facebook Logo">
+                <img src="./pictures/facebook.png" alt="Facebook Logo">
             </a>
             <a href="https://www.twitter.com" target="_blank">
-                <img src="twitter.png" alt="Twitter Logo">
+                <img src="./pictures/twitter.png" alt="Twitter Logo">
             </a>
             <a href="https://www.instagram.com" target="_blank">
-                <img src="instagram.png" alt="Instagram Logo">
+                <img src="./pictures/instagram.png" alt="Instagram Logo">
             </a>
             <a href="https://www.youtube.com" target="_blank">
-                <img src="youtube.png" alt="YouTube Logo">
+                <img src="./pictures/youtube.png" alt="YouTube Logo">
             </a>  
         </div>
-        <div>
-            <h1>Contact Us</h1>
-            <p>Feel free to contact us to know more about your conditions and for treatment methods.</p>
+        <div class="contact-container">
+            <h1>CONTACT US</h1>
+            <p>Get in touch</p>
         </div>
-        <div>
+        <div class="contactForm-container">
             <form id="contactForm">
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="condition">Condition</label>
-                    <input type="text" id="condition" name="condition" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div>
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
                 </div>
                     <button type="submit" onclick="thankyou()">Submit</button>
             </form>
@@ -60,7 +57,16 @@
         </main>
     <script>
         function thankyou(){
-            alert('Thank you for contacting us!')
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message !== " " ){
+                alert('Thank you for contacting us!');
+            } else {
+                alert('Please fill up all the form.');
+            }
+            
         }
     </script>
     </body>

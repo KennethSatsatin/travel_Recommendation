@@ -18,7 +18,7 @@
                 <div class="search-bar">
                     <div class="input-wrapper">
                         <i class="fas fa-search"></i>
-                        <input type="text" id="conditionInput" placeholder="Enter a destination or keyword">
+                        <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
                         <button id='btnSearch'>Search</button>
                         <button id='btnClear'>Clear</button>
                     </div>
@@ -28,16 +28,16 @@
         <main class="grid-container">
             <div class="grid-item logo">
                     <a href="https://www.facebook.com" target="_blank">
-                        <img src="facebook.png" alt="Facebook Logo">
+                        <img src="./pictures/facebook.png" alt="Facebook Logo">
                     </a>
                     <a href="https://www.twitter.com" target="_blank">
-                        <img src="twitter.png" alt="Twitter Logo">
+                        <img src="./pictures/twitter.png" alt="Twitter Logo">
                     </a>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img src="instagram.png" alt="Instagram Logo">
+                        <img src="./pictures/instagram.png" alt="Instagram Logo">
                     </a>
                     <a href="https://www.youtube.com" target="_blank">
-                        <img src="youtube.png" alt="YouTube Logo">
+                        <img src="./pictures/youtube.png" alt="YouTube Logo">
                     </a>  
             </div>
             <div class="content">
@@ -45,6 +45,10 @@
                 <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
                 <button id="btnBookNow">Book Now</button>
             </div>
+            <div class="searchResult">
+                <div id="result"></div>
+            </div>
         </main>
+    <script src="./travel_recommendation.js"></script>
     </body>
 </html>

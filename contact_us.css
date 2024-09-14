@@ -1,51 +1,149 @@
-body{
-        text-align: center;
-    }
-    /* Some basic styling for demonstration purposes */
-    #contactForm {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    #contactForm input,
-    #contactForm textarea {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 8px;
-    }
-    #contactForm button {
-      padding: 10px 20px;
-      background-color: #16423C;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    #contactForm button:hover {
-      background-color: #010E09;
-    }
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
 
-    /* Grid layout */
+/* Basic styles for body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgba(22, 66, 60, 0.5), rgba(106, 156, 137, 0.5)), url('./pictures/Travel.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Navigation styles */
+nav {
+    background: linear-gradient(to right, rgba(22, 66, 60, 0.5), rgba(106, 156, 137, 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    flex: 1;
+}
+
+.nav-center {
+    flex: 2;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.nav-center ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    padding: 0; /* Remove default padding */
+}
+
+.nav-center ul li {
+    display: inline;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav h1 {
+    color: white;
+    padding: 5px;
+}
+
+/* Contact Form styles */
+.contactForm-container {
+    align-self: end;
+    padding: 10px;
+}
+
+#contactForm {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 680px;
+    color: white;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding:  10px 0px 10px 0px;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    padding-left: 10px;
+}
+
+#contactForm button {
+    padding: 10px 0; /* Adjusted to fit the container width */
+    background-color: #16423C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%; /* Full width to fit the container */
+}
+
+#contactForm button:hover {
+    background-color: #010E09;
+}
+
+/* Grid layout styles */
 .grid-container {
     display: grid;
-    grid-template-columns: 200px 500px 1100px; /* Adjust the ratio of the columns */
-    gap: 10px; /* Space between columns */
+    grid-template-columns: 200px 600px auto;
     height: 600px;
 }
 
 .grid-item.logo {
-    grid-column: 1; 
-    justify-self: start; 
-    align-self: end; 
+    grid-column: 1;
+    justify-self: start;
+    align-self: end;
 }
 
 .logo {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     padding: 10px;
     gap: 20px;
 }
 
 .logo img {
-    width: 30px; 
-    height: 30px; 
+    width: 30px;
+    height: 30px;
+}
+
+/* Contact container styles */
+.contact-container {
+    justify-self: start;
+    align-self: center;
+    padding: 10px;
+}
+
+.contact-container h1 {
+    font-size: 70px;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: white;
+    padding: 50px 0;
+}
+
+.contact-container p {
+    color: white;
 }
